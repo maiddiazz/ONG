@@ -1,0 +1,354 @@
+:root {
+    --verdeoscuro: #1F4D37; 
+    --beige: #FCEDE1; 
+    --verdeclaro: #04BF7B; 
+    --celeste: #BEEDE0;
+    --titulo: "Lexend", sans-serif; 
+    --subtitulo: "Montserrat", sans-serif;
+}
+html {
+    scroll-behavior: smooth
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body.light-mode {
+    --verdeoscuro: #FCEDE1;
+    --celeste: #04BF7B;      
+    --beige: #1F4D37;    
+    --verdeclaro: #BEEDE0;  
+}
+body {
+    font-family: "Lexend", sans-serif;
+    background-color: var(--verdeoscuro); 
+    color: #333;
+    font-size: 16px;
+    line-height: 160%;
+    margin-bottom: 20px;
+    font-weight: 550;
+    margin: 0;
+    overflow-x: hidden;
+}
+/*scroll */
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+    position: absolute;
+    z-index: 9;
+}
+
+
+::-webkit-scrollbar-track {
+    background: var(--verdeoscuro);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--beige); 
+    border-radius: 10px; 
+    border: 3px solid var(--verdeoscuro); 
+}
+
+.header-calculadora {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+}
+.nav-logo img{
+    height: 60px; 
+}
+
+.nav-floating {
+    background-color: var(--beige);
+    width: 100%;
+    max-width: 1200px;
+    height: 80px;
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* --- Links --- */
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--verdeoscuro);
+    font-weight: 500;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.nav-links a.active {
+    color: #04BF7B;
+    font-weight: 700;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #04BF7B;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--beige);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #04BF7B;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.titulo{
+    background-color: var(--verdeoscuro); 
+    padding: 120px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    max-width: 800px; 
+}
+
+.titulo-impacto {
+    font-family: var(--titulo);
+    color: #04BF7B; 
+    font-size: 64px; 
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.bajada-impacto {
+    color: var(--beige); 
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+
+.calculadora-impacto {
+    background-color: var(--verdeoscuro);
+    padding: 50px 10%;
+    color: var(--verdeoscuro);
+}
+
+.calculadora-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.paso-num {
+    color: var(--beige);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.card-input {
+    background-color: var(--celeste); 
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.card-input h3 { font-size: 20px; margin-bottom: 15px; }
+.card-input p { font-size: 14px; margin-bottom: 30px; opacity: 0.8; }
+
+.input-container input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--verdeoscuro);
+    font-size: 24px;
+    width: 60px;
+    outline: none;
+}
+
+.lista-proyectos { display: flex; flex-direction: column; gap: 30px; }
+
+.proyecto-card {
+    background-color: var(--beige); 
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.proyecto-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.proyecto-info h3 { margin-bottom: 10px; }
+.proyecto-info img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.proyecto-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(31, 77, 55, 0.1);
+    padding-top: 20px;
+}
+
+.stat label {
+    display: block;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-bottom: 5px;
+}
+
+.stat span { font-weight: bold; font-size: 18px; }
+
+.btn-donar {
+    background-color: var(--celeste);
+    border: 1px solid var(--verdeoscuro);
+    padding: 10px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-donar:hover { background-color: var(--verdeoscuro); color: var(--celeste); }
+@media (max-width: 992px) {
+    .calculadora-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .col-entrada {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-calculadora {
+        padding: 10px;
+    }
+
+    .nav-floating {
+        padding: 0 15px;
+        height: auto;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+
+    .nav-logo img {
+        height: 45px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(31, 77, 55, 0.1);
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* 2. Sección Hero */
+    .titulo {
+        padding: 80px 20px 40px 20px;
+    }
+
+    .titulo-impacto {
+        font-size: 38px !important;
+    }
+
+    .bajada-impacto {
+        font-size: 16px;
+    }
+    .calculadora-impacto {
+        padding: 20px 5%;
+    }
+    .card-input {
+        padding: 25px;
+    }
+
+    .proyecto-info {
+        flex-direction: column; 
+    }
+
+    .proyecto-info .imagen-mini {
+        width: 100%;
+        height: 180px;
+    }
+
+    .proyecto-info img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .proyecto-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .stat {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(31, 77, 55, 0.05);
+        padding-bottom: 5px;
+    }
+
+    .btn-donar {
+        width: 100%; 
+        padding: 15px;
+        margin-top: 10px;
+    }
+}

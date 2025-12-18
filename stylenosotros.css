@@ -1,0 +1,458 @@
+:root {
+    --verdeoscuro: #1F4D37; 
+    --beige: #FCEDE1; 
+    --verdeclaro: #04BF7B; 
+    --celeste: #BEEDE0;
+    --titulo: "Lexend", sans-serif; 
+    --subtitulo: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lexend", sans-serif;
+    background-color: #df731b; 
+    color: #333;
+    font-size: 16px;
+    line-height: 160%;
+    margin-bottom: 20px;
+    font-weight: 550;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+.menu {
+    max-width: 1200px;
+    height: 55px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.header {
+    font-family: "Montserrat", sans-serif;
+    background-color: #1F4D37;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 1.5s linear; 
+    letter-spacing: 1px;
+}
+
+.header .logo img {
+    height: 60px; 
+}
+
+.header .logo,
+.header .opciones-menu,
+.header .boton-app {
+    transition:transform 0.5s linear pacity 1s ease-out;
+}
+
+.header .opciones-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header .opciones-menu li {
+    margin-left: 30px;
+}
+
+.header .opciones-menu li a {
+    text-decoration: none;
+    color: #FCEDE1;
+    font-weight: bold;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.header .opciones-menu li a:hover,
+.header .opciones-menu li a.active {
+    color: #04BF7B; 
+    border-bottom: 2px solid #04BF7B;
+}
+
+.boton-app .btn {
+    display: inline-block;
+    background-color: var(--beige);
+    color: var(--verdeoscuro);
+    padding: 0.8rem 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.5s ease-in, transform 0.3s ease, box-shadow 0.3s ease;
+}
+        
+.btn:hover {
+    background-color: var(--celeste);
+    transition: background-color 1s ease-in
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- PÁGINA: NOSOTROS --- */
+
+.about-hero-section {
+    position: relative;
+    padding: 180px 0 100px 0; /* Padding superior para dejar espacio al menú */
+    background-color: var(--verdeoscuro); 
+}
+
+/* El contenido del Hero debe estar por encima del fondo (aunque aquí el fondo es solo un color) */
+.about-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Si quisieras una imagen en el fondo, iría aquí */
+}
+
+.contenido-nosotros {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: var(--beige);
+}
+
+/* Textos de cabecera */
+.tag-sobre-nosotros {
+    font-family: var(--subtitulo);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: var(--celeste); /* Verde claro/celeste */
+}
+
+.titulo-nosotros {
+    font-family: var(--titulo);
+    font-weight: 650;
+    font-size: 60px;
+    line-height: 1.1;
+    max-width: 800px;
+    margin-bottom: 60px;
+    color: var(--beige);
+}
+
+/* Contenedor de Texto e Imágenes */
+.textos-y-imagenes {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Columna de Texto */
+.columna-texto {
+    flex: 1;
+    max-width: 600px;
+    font-family: var(--subtitulo);
+}
+
+.parrafo-resumen {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: var(--celeste);
+}
+
+.parrafo-largo {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+/* Columna de Imágenes */
+.columna-imagenes {
+    flex: 1;
+    position: relative;
+    height: 600px; /* Altura del contenedor de imágenes */
+    min-width: 400px;
+}
+
+.imagen-wrapper {
+    position: absolute;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.img-flotante {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Posicionamiento y Tamaños de las Imágenes Flotantes */
+/* Izquierda Superior */
+.columna-imagenes div:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    z-index: 4;
+}
+
+/* Centro Derecha */
+.columna-imagenes div:nth-child(2) {
+    top: 150px;
+    left: 200px;
+    width: 200px;
+    height: 180px;
+    z-index: 3;
+}
+
+/* Derecha Inferior */
+.columna-imagenes div:nth-child(3) {
+    top: 50px;
+    right: 0;
+    width: 180px;
+    height: 250px;
+    z-index: 2;
+}
+
+/* Imagen Full Width Inferior */
+.columna-imagenes div:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    z-index: 1;
+}
+
+/* --- ANIMACIONES DE APARICIÓN (Sophisticado) --- */
+
+/* Estado inicial (oculto y desplazado) */
+.animate-in, .animate-in-delay-1, .animate-in-delay-2, .animate-in-delay-3, .animate-in-delay-4 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado final (visible) - Se añadirá con JS (Intersection Observer) */
+.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delays para las imágenes */
+.animate-in-delay-1 { transition-delay: 0.2s; }
+.animate-in-delay-2 { transition-delay: 0.4s; }
+.animate-in-delay-3 { transition-delay: 0.6s; }
+.animate-in-delay-4 { transition-delay: 0.8s; }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ONG sobre reforestación">
+    <meta name="keywords" content="ong, reforestación, germinar">
+    <meta name="author" content="Maitena Diaz">
+    <title>Nosotros</title>
+    <link rel="icon" type="image/x-icon" href="logo (1).ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Italiana&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,332;1,332&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Italiana&family=Lexend:wght@100..900&family=Montserrat:ital@0;1&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="styleindex copy.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu">
+            <div class="logo">
+                <a href="index copy.html"><img src="logobeige.png" alt="Logo"></a>
+            </div>
+
+            <ul class="opciones-menu">
+                <li><a href="index copy.html">Inicio</a></li>
+                <li><a href="nosotros.html"class="active">Nosotros</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="donar.html">Involucrate</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            
+            <div class="menu-btn-compacto">Menu</div>
+            
+            <div class="boton-app">
+                <a href="calculadora.html" class="btn">Calcula tu impacto</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero-section">
+            <div class="about-hero-background"></div> <div class="contenido-nosotros">
+                <p class="tag-sobre-nosotros animate-in">SOBRE NOSOTROS</p>
+                
+                <h1 class="titulo-nosotros animate-in">
+                    We work towards a planet where the environment can thrive along with people.
+                </h1>
+                
+                <div class="textos-y-imagenes">
+                    
+                    <div class="columna-texto animate-in">
+                        <p class="parrafo-resumen">
+                            Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                        </p>
+                        <p class="parrafo-largo">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim elementum tristique.
+                        </p>
+                    </div>
+
+                    <div class="columna-imagenes">
+                        
+                        <div class="imagen-wrapper animate-in-delay-1">
+                            <img src="nos4.jpg" alt="Plantando árboles" class="img-flotante">
+                        </div>
+
+                        <div class="imagen-wrapper animate-in-delay-2">
+                            <img src="nos3.jpg" alt="Manos en la tierra" class="img-flotante">
+                        </div>
+
+                        <div class="imagen-wrapper animate-in-delay-3">
+                            <img src="nos2.jpg" alt="Regando planta" class="img-flotante">
+                        </div>
+                        
+                        <div class="imagen-wrapper animate-in-delay-4">
+                            <img src="nosbanner.jpg" alt="Grupo de voluntarios" class="img-flotante img-full-width">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    <Script src="script.js"></Script>    
+</body>
+</html>
+
+
+
+
+.parrafo-largo {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+/* Columna de Imágenes */
+.columna-imagenes {
+    flex: 1;
+    position: relative;
+    height: 600px; /* Altura del contenedor de imágenes */
+    min-width: 400px;
+}
+
+.imagen-wrapper {
+    position: absolute;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.img-flotante {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Posicionamiento y Tamaños de las Imágenes Flotantes */
+/* Izquierda Superior */
+.columna-imagenes div:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    z-index: 4;
+}
+
+/* Centro Derecha */
+.columna-imagenes div:nth-child(2) {
+    top: 150px;
+    left: 200px;
+    width: 200px;
+    height: 180px;
+    z-index: 3;
+}
+
+/* Derecha Inferior */
+.columna-imagenes div:nth-child(3) {
+    top: 50px;
+    right: 0;
+    width: 180px;
+    height: 250px;
+    z-index: 2;
+}
+
+/* Imagen Full Width Inferior */
+.columna-imagenes div:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    z-index: 1;
+}
+
+/* --- ANIMACIONES DE APARICIÓN (Sophisticado) --- */
+
+/* Estado inicial (oculto y desplazado) */
+.animate-in, .animate-in-delay-1, .animate-in-delay-2, .animate-in-delay-3, .animate-in-delay-4 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado final (visible) - Se añadirá con JS (Intersection Observer) */
+.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delays para las imágenes */
+.animate-in-delay-1 { transition-delay: 0.2s; }
+.animate-in-delay-2 { transition-delay: 0.4s; }
+.animate-in-delay-3 { transition-delay: 0.6s; }
+.animate-in-delay-4 { transition-delay: 0.8s; }
