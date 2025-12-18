@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="ONG sobre reforestación">
+    <meta name="keywords" content="ong, reforestación, germinar">
+    <meta name="author" content="Maitena Diaz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="icon" type="image/x-icon" href="logo (1).ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Italiana&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,332;1,332&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Italiana&family=Lexend:wght@100..900&family=Montserrat:ital@0;1&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="stylecalcu.css">
+</head>
+<body>
+    <header class="header-calculadora">
+        <nav class="nav-floating">
+            <div class="nav-logo">
+               <a href="calculadora.html"><img src="logo.png" alt="Logo"></a>
+            </div>
+
+            <div class="nav-links">
+                <a href="calculadora.html" class="active">Calcular impacto</a>
+                <a href="index.html">Volver al sitio</a>
+            </div>
+            <div class="nav-extra">
+                <label class="switch">
+                    <input type="checkbox" id="modoClaroToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </nav>
+    </header>
+    <section class="titulo">
+        <div class="hero">
+            <h1 class="titulo-impacto">Give life to a forest with your company</h1>
+            <p class="bajada-impacto">
+                Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. 
+                Nunc ut sem vitae risus tristique posuere.
+            </p>
+        </div>
+    </section>
+    <section class="calculadora-impacto">
+        <div class="calculadora-grid">
+            
+            <div class="col-entrada">
+                <span class="paso-num">1.</span>
+                <div class="card-input">
+                    <h3>Enter the number of trees</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    
+                    <div class="input-container">
+                        <input type="number" id="treeInput" value="10" min="1" oninput="actualizarCalculos()">
+                        <span class="controls">
+                            </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-proyectos">
+                <span class="paso-num">2. SELECCIONE EL PROYECTO</span>
+                
+                <div class="lista-proyectos">
+                    <div class="proyecto-card">
+                        <div class="proyecto-info">
+                            <div class="texto">
+                                <h3>Restauración de Selva Misionera</h3>
+                                <p>Plantamos especies nativas para recuperar el corredor biológico y proteger la fauna local de la deforestación.</p>
+                            </div>
+                            <div class="imagen-mini">
+                                <picture>
+                                    <source srcset="mis2.webp" type="image/webp">
+                                    <img src="mis2.jpg" alt="Plantando árboles" class="img-flotante-proy">
+                                </picture>                               
+                            </div>
+                        </div>
+                        
+                        <div class="proyecto-stats">
+                            <div class="stat">
+                                <label>Precio</label>
+                                <span class="valor-precio">€ 6550.00</span>
+                            </div>
+                            <div class="stat">
+                                <label>Nº Arboles</label>
+                                <span class="valor-trees">1000</span>
+                            </div>
+                            <div class="stat">
+                                <label>M² reforestados</label>
+                                <span class="valor-sqm">4000</span>
+                            </div>
+                            <button class="btn-donar">Donar</button>
+                        </div>
+                    </div>
+
+                    <div class="proyecto-card">
+                        <div class="proyecto-info">
+                            <div class="texto">
+                                <h3>Reforestación Post-Incendio</h3>
+                                <p>Devolviendo el verde a las laderas del Piltriquitrón y zonas aledañas.</p>
+                            </div>
+                            <div class="imagen-mini">
+                                <picture>
+                                    <source srcset="bol4.webp" type="image/webp">
+                                    <img src="bol4.jpg" alt="Plantando árboles" class="img-flotante-proy">
+                                </picture>                              
+                            </div>
+                        </div>
+                        
+                        <div class="proyecto-stats">
+                            <div class="stat">
+                                <label>Precio</label>
+                                <span class="valor-precio">€ 6550.00</span>
+                            </div>
+                            <div class="stat">
+                                <label>Nº Arboles</label>
+                                <span class="valor-trees">1000</span>
+                            </div>
+                            <div class="stat">
+                                <label>M² reforestados</label>
+                                <span class="valor-sqm">4000</span>
+                            </div>
+                            <button class="btn-donar">Donar</button>
+                        </div>
+                    </div>
+                                        
+                    <div class="proyecto-card">
+                        <div class="proyecto-info">
+                            <div class="texto">
+                                <h3>Bosques de Bolsillo en la Ciudad</h3>
+                                <p>Creamos micro-ecosistemas en zonas urbanas para bajar la temperatura de las calles y mejorar la calidad del aire.</p>
+                            </div>
+                            <div class="imagen-mini">
+                                <picture>
+                                    <source srcset="ur2.webp" type="image/webp">
+                                    <img src="ur2.jpg" alt="Plantando árboles" class="img-flotante-proy">
+                                </picture>                                
+                            </div>
+                        </div>
+                        
+                        <div class="proyecto-stats">
+                            <div class="stat">
+                                <label>Precio</label>
+                                <span class="valor-precio">€ 6550.00</span>
+                            </div>
+                            <div class="stat">
+                                <label>Nº Arboles</label>
+                                <span class="valor-trees">1000</span>
+                            </div>
+                            <div class="stat">
+                                <label>M² reforestados</label>
+                                <span class="valor-sqm">4000</span>
+                            </div>
+                            <button class="btn-donar">Donar</button>
+                        </div>
+                    </div>
+                                        
+                    <div class="proyecto-card">
+                        <div class="proyecto-info">
+                            <div class="texto">
+                                <h3>Reforestación de Altura</h3>
+                                <p>Trabajamos en las laderas de los cerros para prevenir la erosión del suelo y proteger las cuencas de agua naturales.</p>
+                            </div>
+                            <div class="imagen-mini">
+                                <picture>
+                                    <source srcset="cor3.webp" type="image/webp">
+                                    <img src="cor3.jpg" alt="Plantando árboles" class="img-flotante-proy">
+                                </picture>                               
+                            </div>
+                        </div>
+                        
+                        <div class="proyecto-stats">
+                            <div class="stat">
+                                <label>Precio</label>
+                                <span class="valor-precio">€ 6550.00</span>
+                            </div>
+                            <div class="stat">
+                                <label>Nº Arboles</label>
+                                <span class="valor-trees">1000</span>
+                            </div>
+                            <div class="stat">
+                                <label>M² reforestados</label>
+                                <span class="valor-sqm">4000</span>
+                            </div>
+                            <button class="btn-donar">Donar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <Script src="script.js"></Script>    
+
+</body>
